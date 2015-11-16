@@ -51,8 +51,8 @@ parameters:
     antares_accessible.cache_driver.class: Doctrine\Common\Cache\ApcCache
 
 services:
-    antares_accessible.cache.driver: %antares_accessible.cache_driver.class%
-    antares_accessible.annotations.cache_driver: %antares_accessible.cache_driver.class%
+    antares_accessible.cache.driver: "%antares_accessible.cache_driver.class%"
+    antares_accessible.annotations.cache_driver: "%antares_accessible.cache_driver.class%"
 ```
 
 - `antares_accessible.cache.driver` is the cache driver used by the library
