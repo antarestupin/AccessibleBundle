@@ -1,5 +1,7 @@
 # AntaresAccessibleBundle
 
+[![License](https://poser.pugx.org/antares/accessible/license)](https://packagist.org/packages/antares/accessible-bundle)
+
 AntaresAccessibleBundle provides an [Accessible](https://github.com/antares993/Accessible) integration for your Symfony projects.
 
 ## Installation
