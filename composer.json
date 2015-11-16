@@ -10,7 +10,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "antares/accessible": "dev-master"
+        "antares/accessible": "~1.0-dev"
     },
     "autoload": {
         "psr-4": {"Antares\\Bundle\\AccessibleBundle\\": ""}
