@@ -7,19 +7,13 @@ AccessibleBundle provides an [Accessible](https://github.com/antares993/Accessib
 
 ## Installation
 
-First you will need to add [Accessible](https://github.com/antares993/Accessible) in your Composer dependencies:
+First add the bundle in your Composer dependencies:
 
 ```php
-composer require antares/accessible dev-master
+composer require antares/accessible-bundle
 ```
 
-Then, add the bundle:
-
-```php
-composer require antares/accessible-bundle dev-master
-```
-
-Finally, register the bundle in your kernel:
+Then, register the bundle in your kernel:
 
 ```php
 // app/AppKernel.php
