@@ -1,0 +1,23 @@
+{
+    "name": "antares/antares-accessible-bundle",
+    "type": "symfony-bundle",
+    "description": "A bundle to easily use Accessible in Symfony projects.",
+    "keywords": ["accessible", "get", "set", "pojo", "popo", "class", "properties", "getter", "setter", "annotation"],
+    "homepage": "https://github.com/antares993/AntaresAccessibleBundle",
+    "license": "MIT",
+    "authors": [
+        {"name": "Antarès Tupin", "email": "antares993@gmail.com"}
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "antares/accessible": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {"Antares\\Bundle\\AccessibleBundle\\": ""}
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    }
+}
