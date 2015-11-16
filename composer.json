@@ -1,5 +1,5 @@
 {
-    "name": "antares/antares-accessible-bundle",
+    "name": "antares/accessible-bundle",
     "type": "symfony-bundle",
     "description": "A bundle to easily use Accessible in Symfony projects.",
     "keywords": ["accessible", "get", "set", "pojo", "popo", "class", "properties", "getter", "setter", "annotation"],

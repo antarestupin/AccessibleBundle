@@ -1,10 +1,10 @@
 <?php
 
-namespace Antares\AccessibleBundle;
+namespace Antares\Bundle\AccessibleBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Antares\AccessibleBundle\DependencyInjection\Compiler\ConfigurationPass;
+use Antares\Bundle\AccessibleBundle\DependencyInjection\Compiler\ConfigurationPass;
 
 class AntaresAccessibleBundle extends Bundle
 {

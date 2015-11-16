@@ -1,6 +1,6 @@
 <?php
 
-namespace Antares\AccessibleBundle\DependencyInjection;
+namespace Antares\Bundle\AccessibleBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

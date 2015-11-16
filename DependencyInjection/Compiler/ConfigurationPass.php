@@ -1,6 +1,6 @@
 <?php
 
-namespace Antares\AccessibleBundle\DependencyInjection\Compiler;
+namespace Antares\Bundle\AccessibleBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
