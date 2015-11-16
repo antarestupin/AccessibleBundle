@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="antares_accessible.cache_driver.class">Doctrine\Common\Cache\PhpFileCache</parameter>
+        <parameter key="antares_accessible.cache.directory">%kernel.cache_dir%/antares_accessible/</parameter>
+    </parameters>
+
+    <services>
+        <!-- Cache driver -->
+        <service id="antares_accessible.cache.driver" class="%antares_accessible.cache_driver.class%">
+            <argument>%antares_accessible.cache.directory%</argument>
+        </service>
+        <!-- Annotation cache driver -->
+        <service id="antares_accessible.annotations.cache_driver" class="%antares_accessible.cache_driver.class%">
+            <argument>%antares_accessible.cache.directory%</argument>
+        </service>
+    </services>
+</container>
