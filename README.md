@@ -1,5 +1,6 @@
 # AccessibleBundle
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/14520d55-b261-4493-be8a-dae6acde74a6/mini.png)](https://insight.sensiolabs.com/projects/14520d55-b261-4493-be8a-dae6acde74a6)
 [![License](https://poser.pugx.org/antares/accessible/license)](https://packagist.org/packages/antares/accessible-bundle)
 
 AccessibleBundle provides an [Accessible](https://github.com/antares993/Accessible) integration for your Symfony projects.
