@@ -9,33 +9,47 @@ use Doctrine\Common\Cache\ChainCache;
 use Doctrine\Common\Cache\ArrayCache;
 use Doctrine\Common\Annotations\CachedReader;
 use Doctrine\Common\Annotations\AnnotationReader;
+use Antares\Bundle\AccessibleBundle\Service\NullService;
 
 class ConfigurationPass implements CompilerPassInterface
 {
     public function process(ContainerBuilder $container)
     {
         $enableCache = $container->getParameter('antares_accessible.cache.enable');
-        $debug = $container->getParameter('kernel.debug');
 
+        // Annotation reader
+        $annotationsReader = $container->get('antares_accessible.annotations.reader');
+        if ($annotationsReader instanceof NullService) {
+            if ($enableCache) {
+                $debug = $container->getParameter('kernel.debug');
+                $annotationCacheDriver = $container->get('antares_accessible.annotations.cache_driver');
+                $annotationsCache = new ChainCache([
+                    new ArrayCache(),
+                    $annotationCacheDriver
+                ]);
+
+                Configuration::setAnnotationReader(
+                    new CachedReader(
+                        new AnnotationReader(),
+                        $annotationsCache,
+                        $debug
+                    )
+                );
+            }
+        } else {
+            Configuration::setAnnotationReader($annotationsReader);
+        }
+
+        // Constraints validator
+        $constraintsValidator = $container->get('antares_accessible.constraints_validation.validator');
+        if (!$constraintsValidator instanceof NullService) {
+            Configuration::setConstraintsValidator($constraintsValidator);
+        }
+
+        // Cache driver
         if ($enableCache) {
-            // Cache driver
             $cacheDriver = $container->get('antares_accessible.cache.driver');
             Configuration::setCacheDriver($cacheDriver);
-
-            // Annotation reader cache driver
-            $annotationCacheDriver = $container->get('antares_accessible.annotations.cache_driver');
-            $annotationsCache = new ChainCache([
-                new ArrayCache(),
-                $annotationCacheDriver
-            ]);
-
-            Configuration::setAnnotationReader(
-                new CachedReader(
-                    new AnnotationReader(),
-                    $annotationsCache,
-                    $debug
-                )
-            );
         }
 
         // Enable the constraints validation of Initialize annotations values

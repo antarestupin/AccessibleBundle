@@ -18,5 +18,9 @@
         <service id="antares_accessible.annotations.cache_driver" class="%antares_accessible.cache_driver.class%">
             <argument>%antares_accessible.cache.directory%</argument>
         </service>
+        <!-- Annotation Reader -->
+        <service id="antares_accessible.annotations.reader" class="Antares\Bundle\AccessibleBundle\Service\NullService" />
+        <!-- Constraints validator -->
+        <service id="antares_accessible.constraints_validation.validator" class="Antares\Bundle\AccessibleBundle\Service\NullService" />
     </services>
 </container>
