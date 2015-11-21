@@ -3,7 +3,11 @@
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/14520d55-b261-4493-be8a-dae6acde74a6/mini.png)](https://insight.sensiolabs.com/projects/14520d55-b261-4493-be8a-dae6acde74a6)
 [![License](https://poser.pugx.org/antares/accessible/license)](https://packagist.org/packages/antares/accessible-bundle)
 
-AccessibleBundle provides an [Accessible](https://github.com/antares993/Accessible) integration for your Symfony projects.
+AccessibleBundle provides an [Accessible](https://github.com/antares993/Accessible) integration for your Symfony projects. This will allow you to define your classes getters, setters and constructors using powerful annotations.
+
+## Documentation
+
+This file contains everything you will need to use this bundle. For details on the use of the library, see the [Accessible page](https://github.com/antares993/Accessible).
 
 ## Installation
 
