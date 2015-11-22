@@ -58,9 +58,34 @@ parameters:
     antares_accessible.cache_driver.class: Doctrine\Common\Cache\ApcCache
 
 services:
-    antares_accessible.cache.driver: "%antares_accessible.cache_driver.class%"
-    antares_accessible.annotations.cache_driver: "%antares_accessible.cache_driver.class%"
+    antares_accessible.cache.driver:
+        class: "%antares_accessible.cache_driver.class%"
+    antares_accessible.annotations.cache_driver:
+        class: "%antares_accessible.cache_driver.class%"
 ```
 
 - `antares_accessible.cache.driver` is the cache driver used by the library
 - `antares_accessible.annotations.cache_driver` is the cache driver used by the library's annotation reader
+
+### Use a custom annotations reader
+
+You can use a custom annotations reader:
+
+```php
+# app/config/services.yml
+
+services:
+    antares_accessible.annotations.reader:
+        class: Doctrine\Common\Annotations\AnnotationReader
+```
+
+### Use a custom validator
+
+You can also use a custom constraints validator, for example, if your project already uses the validator service, you can use it also with this library like this:
+
+```php
+# app/config/services.yml
+
+services:
+    antares_accessible.constraints_validation.validator: @validator
+```
