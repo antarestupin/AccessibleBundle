@@ -12,6 +12,13 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
  */
 class Configuration implements ConfigurationInterface
 {
+    private $debug;
+
+    public function __construct($debug)
+    {
+        $this->debug = (bool) $debug;
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -31,7 +38,7 @@ class Configuration implements ConfigurationInterface
                 ->arrayNode('constraints_validation')
                     ->addDefaultsIfNotSet()
                     ->children()
-                        ->booleanNode('validate_initialize_values')->defaultValue('%kernel.debug%')->end()
+                        ->booleanNode('validate_initialize_values')->defaultValue($this->debug)->end()
                     ->end()
                 ->end()
             ->end()
