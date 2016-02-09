@@ -28,7 +28,7 @@ public function registerBundles()
     $bundles = array(
         // ...
 
-        new Antares\Bundle\AntaresAccessibleBundle()
+        new Antares\Bundle\AccessibleBundle\AntaresAccessibleBundle()
     );
 }
 ```
