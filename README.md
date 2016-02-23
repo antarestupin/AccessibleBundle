@@ -4,7 +4,31 @@
 [![Latest Stable Version](https://poser.pugx.org/antares/accessible-bundle/v/stable)](https://packagist.org/packages/antares/accessible-bundle)
 [![License](https://poser.pugx.org/antares/accessible/license)](https://packagist.org/packages/antares/accessible-bundle)
 
-AccessibleBundle provides an [Accessible](https://github.com/antares993/Accessible) integration for your Symfony projects. This will allow you to define your classes getters, setters and constructors using powerful annotations.
+AccessibleBundle provides an [Accessible](https://github.com/antares993/Accessible) integration for your Symfony projects. This will allow you to define your class behavior using powerful annotations.
+
+Here is a (very) basic example:
+
+```php
+class Customer
+{
+  use AutomatedBehaviorTrait;
+  
+  /**
+   * @Access({Access::GET, Access::SET})
+   * @Assert\Email
+   */
+  private $email;
+}
+
+
+$bob = new Customer();
+
+$bob->setEmail('bob@example.com');
+$bob->getEmail(); // bob@example.com
+$bob->setEmail('not an email address'); // throws an InvalidArgumentException
+```
+
+Here the library is used to generate getters and setters, but it can also be used to manage constructors, attributes initialization, collections and associations between classes!
 
 ## Documentation
 
