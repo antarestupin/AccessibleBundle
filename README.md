@@ -112,5 +112,5 @@ You can also use a custom constraints validator, for example, if your project al
 # app/config/services.yml
 
 services:
-    antares_accessible.constraints_validation.validator: @validator
+    antares_accessible.constraints_validation.validator: '@validator'
 ```
