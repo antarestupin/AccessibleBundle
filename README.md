@@ -30,6 +30,8 @@ $bob->setEmail('not an email address'); // throws an InvalidArgumentException
 
 Here the library is used to generate getters and setters, but it can also be used to manage constructors, attributes initialization, collections and associations between classes!
 
+**Suggestions and contributions are welcome!**
+
 ## Documentation
 
 This file contains everything you will need to use this bundle. For details on the use of the library, see the [Accessible page](https://github.com/antares993/Accessible).
