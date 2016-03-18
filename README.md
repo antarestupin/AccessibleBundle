@@ -59,7 +59,7 @@ public function registerBundles()
 }
 ```
 
-In order to avoid issues with the `PropertyAccess` component you should also add the following lines in your configuration:
+In order to be compatible with the `PropertyAccess` component you should also add the following lines in your configuration:
 
 ```php
 # app/config/config.yml
