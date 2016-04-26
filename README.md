@@ -12,7 +12,7 @@ Here is a (very) basic example:
 class Customer
 {
   use AutomatedBehaviorTrait;
-  
+
   /**
    * @Access({Access::GET, Access::SET})
    * @Assert\Email
@@ -76,11 +76,13 @@ The configuration of this bundle is quite simple, take a look:
 # app/config/config.yml
 antares_accessible:
     cache.enable: true # default: false
+    constraints_validation.enable: false # default: true
     constraints_validation.validate_initialize_values: true # default: %kernel.debug%
 ```
 
 Here are the meanings of the configuration values:
 - `cache.enable`: Do you want a cache driver to be used?
+- `constraints_validation.enable`: Do you want your class setters to use constraints validation?
 - `constraints_validation.validate_initialize_values`: Do you want the `@Initialize` and `@InitializeObject` values to be validated?
 
 ### Use a custom cache driver
