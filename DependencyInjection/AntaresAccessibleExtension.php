@@ -26,6 +26,7 @@ class AntaresAccessibleExtension extends Extension
         $loader->load('services.xml');
 
         $container->setParameter('antares_accessible.cache.enable', $config['cache']['enable']);
+        $container->setParameter('antares_accessible.constraints_validation.enable', $config['constraints_validation']['enable']);
         $container->setParameter('antares_accessible.constraints_validation.validate_initialize_values', $config['constraints_validation']['validate_initialize_values']);
     }
 }

@@ -53,6 +53,10 @@ class ConfigurationPass implements CompilerPassInterface
         }
 
         // Enable the constraints validation of Initialize annotations values
+        $constraintsValidationEnabled = $container->getParameter('antares_accessible.constraints_validation.enable');
+        Configuration::setConstraintsValidationEnabled($constraintsValidationEnabled);
+
+        // Enable the constraints validation of Initialize annotations values
         $validateInitializeValues = $container->getParameter('antares_accessible.constraints_validation.validate_initialize_values');
         Configuration::setInitializeValuesValidationEnabled($validateInitializeValues);
     }

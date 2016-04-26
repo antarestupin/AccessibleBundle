@@ -38,6 +38,7 @@ class Configuration implements ConfigurationInterface
                 ->arrayNode('constraints_validation')
                     ->addDefaultsIfNotSet()
                     ->children()
+                        ->booleanNode('enable')->defaultValue(true)->end()
                         ->booleanNode('validate_initialize_values')->defaultValue($this->debug)->end()
                     ->end()
                 ->end()
