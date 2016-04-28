@@ -1,6 +1,7 @@
 # AccessibleBundle
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/14520d55-b261-4493-be8a-dae6acde74a6/mini.png)](https://insight.sensiolabs.com/projects/14520d55-b261-4493-be8a-dae6acde74a6)
+[![Dependency Status](https://www.versioneye.com/user/projects/572287c7ba37ce004309ecc2/badge.svg?style=flat)](https://www.versioneye.com/user/projects/572287c7ba37ce004309ecc2)
 [![Latest Stable Version](https://poser.pugx.org/antares/accessible-bundle/v/stable)](https://packagist.org/packages/antares/accessible-bundle)
 [![License](https://poser.pugx.org/antares/accessible/license)](https://packagist.org/packages/antares/accessible-bundle)
 
