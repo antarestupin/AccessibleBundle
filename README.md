@@ -76,10 +76,14 @@ The configuration of this bundle is quite simple, take a look:
 ```yaml
 # app/config/config.yml
 antares_accessible:
-    cache.enable: true # default: false
-    constraints_validation.enable: false # default: true
-    constraints_validation.validate_initialize_values: true # default: %kernel.debug%
+    cache:
+        enable: true # default: false
+    constraints_validation:
+        enable: false # default: true
+        validate_initialize_values: true # default: %kernel.debug%
 ```
+
+Note that you don't need to set the configuration as everything is already configured by default.
 
 Here are the meanings of the configuration values:
 - `cache.enable`: Do you want a cache driver to be used?
